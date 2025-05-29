@@ -1,0 +1,12 @@
+Text Feature Extraction: 
+- https://scikit-
+learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html
+- https://scikit-
+learn.org/stable/modules/generated/sklearn.feature_extraction.text.HashingVectorizer.html#sklearn.feature_extraction.text.HashingVectorizer
+- https://scikit-
+learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html#sklearn.feature_extraction.text.CountVectorizer
+
+Machine Learning Models:
+- https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
+- https://scikit-learn.org/stable/modules/svm.html
+- https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
