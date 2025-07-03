@@ -28,3 +28,28 @@ The dataset comprises Amazon reviews with the following fields:
 
 ##### Preprocessing
 I cleaned the data by removing missing reviews and normalized text using Scikit-learn’s TfidfVectorizer with a mindf=5 to exclude rare tokens, max_df=0.8 to exclude overlycommon tokens and a max vocabularysize of 10, 000.
+
+## 3. Binary classification
+
+#### 3.1 Labeling Strategy
+Binary labels were created using four cutoffs:
+* Cutoff 1: 0 if ≤ 1, 1 otherwise
+* Cutoff 2: 0 if ≤ 2, 1 otherwise
+* Cutoff 3: 0 if ≤ 3, 1 otherwise
+* Cutoff 4: 0 if ≤ 4, 1 otherwise
+
+#### 3.2 Models Used
+I tested the following classifiers:
+* Logistic Regression
+* Support Vector Machine (SVM)
+* Perceptron (cost function)
+
+#### 3.3 Hyperparameter Tuning
+Grid search with 5-fold cross-validation was used to tune parameters. Each model’s performance was evaluated on a held-out validation set.
+
+#### 3.4 Evaluation Metrics
+For each cutoff, we report:
+* Confusion Matrix
+* Accuracy
+* Macro F1 Score
+* ROC Curve and AUC
