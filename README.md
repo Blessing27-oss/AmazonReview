@@ -12,7 +12,7 @@ models to classify Amazon product reviews using natural language processing tech
 and classical machine learning models.
 
 #### Dataset
-The dataset provided for this project are Training.csv, and Test.csv. The training data contains ....rows and the test data contains ...rows. The training data provides the information presented in ....., while the test dataset includes the same variables, with the exception of the "overall" variable. 
+The dataset provided for this project are Training.csv, and Test.csv. The training data contains ....rows and the test data contains ...rows. The training data provides the information presented in ....., while the test dataset includes the same variables, with the exception of the "overall" variable. The most useful data from the features includes: "reviewText", "summary", and "category".
 
 #### 2.  Dataset Description
 The dataset comprises Amazon reviews with the following fields:
