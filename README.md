@@ -6,10 +6,8 @@ This is a final project for my Machine Learning and Statistical Data Analysis co
 The objective is to accurately apply machine learning models and concepts learned in this course to a real-world dataset. The Amazon reviews dataset was analyzed to predict product ratings from textual reviews and analyze performance using multiple evaluation metrics. The project involved several stages, including data preprocessing, feature engineering, model building, using Scikit-learn, I trained binary and multiclass models, tuning hyperparameters via cross-validation. Results are benchmarked against baseline F1 scores using confusion matrices, ROC curves, AUC scores, and macro F1 metrics, and clustering methods to analyze the product reviews.
 
 #### 1.  Introduction
-The task of review classification is central to understanding user sentiment and product
-quality on e-commerce platforms. This project explores binary and multiclass classification
-models to classify Amazon product reviews using natural language processing techniques
-and classical machine learning models.
+The task of review classification is central to understanding user sentiment and product quality on e-commerce platforms. This project explores binary and multiclass classification
+models to classify Amazon product reviews using natural language processing techniques and classical machine learning models.
 
 #### Dataset
 The dataset provided for this project are Training.csv, and Test.csv. The training data contains ....rows and the test data contains ...rows. The training data provides the information presented in ....., while the test dataset includes the same variables, with the exception of the "overall" variable. The most useful data from the features includes: "reviewText", "summary", and "category".
@@ -58,3 +56,21 @@ For each cutoff, we report:
 * Accuracy
 * Macro F1 Score
 * ROC Curve and AUC
+
+## 4. Multiclass classification
+#### 4.1 Setup
+I extended the task to predict the exact rating (1–5). Models were trained using one-vs-rest
+strategy with label binarization for ROC analysis.
+
+#### 4.2 Evaluation Metrics
+* Confusion Matrix
+* Accuracy
+* Macro F1 Score
+* ROC and AUC (One-vs-Rest)
+
+## 5. Clustering
+To cluster the product reviews in the test dataset, I created word features from the data and used that for k-means clustering. Clustering will be done by product types, i.e., in this case, the labels will be product categories. Silhouette score and Rand index were used to analyze the quality of clustering. Silhouette score of 0.7947 suggests the clustering is performing very well in terms of structure and separation. Rand index of 0.5371 means the clustering agrees with the ground truth only slightly better than chance.
+
+## 6. Discussion
+Logistic Regression appeared as the best model for binary classification. Logistic regression is often considered a strong baseline classifier, not necessarily "the best overall," but consistently reliable, interpretable, and efficient. While Naive Bayes (multinomial) appeared best for multiclass classfication. Naive Bayes (especially Multinomial Naive Bayes) is often considered a strong baseline for multiclass classification, particularly in certain domains like text classification (e.g., spam detection, sentiment analysis). While it may not always be the best in every scenario, here’s why it often outperforms or competes well with models like Logistic Regression or Random Forests in multiclass problems.
+
