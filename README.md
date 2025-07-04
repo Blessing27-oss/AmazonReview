@@ -1,15 +1,18 @@
 ### AMAZON REVIEW CLASSIFICATION : A Machine Learning Approach
 
-This project applies various machine learning models to the Amazon product review dataset to perform binary classification, multiclass classification, and 
-clustering approaches to analyze and categorize product reviews. The objective is to accurately predict product ratings from textual reviews and analyze 
-performance using multiple evaluation metrics. Using Scikit-learn, I trained logistic regression, SVM, and perceptron models, tuning hyperparameters via 
-cross-validation. Results are benchmarked against baseline F1 scores using confusion matrices, ROC curves, AUC scores, and macro F1 metrics.
+#### Abstract
+This is a final project for my Machine Learning and Statistical Data Analysis course (CS74). I analyzed the Amazon product review dataset and create classifiction and clustering approaches models. I used skills and concepts learned during course, such as feature engineering, and model evaluation metrics. The project also required to produce csv files from each training which was used in Kaggle to automatically compare my results to a hidden "correct" test file.
+
+The objective is to accurately apply machine learning models and concepts learned in this course to a real-world dataset. The Amazon reviews dataset was analyzed to predict product ratings from textual reviews and analyze performance using multiple evaluation metrics. The project involved several stages, including data preprocessing, feature engineering, model building, using Scikit-learn, I trained binary and multiclass models, tuning hyperparameters via cross-validation. Results are benchmarked against baseline F1 scores using confusion matrices, ROC curves, AUC scores, and macro F1 metrics, and clustering methods to analyze the product reviews.
 
 #### 1.  Introduction
 The task of review classification is central to understanding user sentiment and product
 quality on e-commerce platforms. This project explores binary and multiclass classification
 models to classify Amazon product reviews using natural language processing techniques
 and classical machine learning models.
+
+#### Dataset
+The dataset provided for this project are Training.csv, and Test.csv. The training data contains ....rows and the test data contains ...rows. The training data provides the information presented in ....., while the test dataset includes the same variables, with the exception of the "overall" variable. 
 
 #### 2.  Dataset Description
 The dataset comprises Amazon reviews with the following fields:
@@ -27,7 +30,7 @@ The dataset comprises Amazon reviews with the following fields:
 * category: The Amazon product category (e.g., Electronics, Clothing)
 
 ##### Preprocessing
-I cleaned the data by removing missing reviews and normalized text using Scikit-learn’s TfidfVectorizer with a mindf=5 to exclude rare tokens, max_df=0.8 to exclude overlycommon tokens and a max vocabularysize of 10, 000.
+I cleaned the data by removing missing reviews and normalized text using Scikit-learn’s TfidfVectorizer with a mindf=5 to exclude rare tokens, max_df=0.8 to exclude overly common tokens and a max vocabulary size of 10, 000.
 
 ## 3. Binary classification
 
@@ -43,6 +46,8 @@ I tested the following classifiers:
 * Logistic Regression
 * Support Vector Machine (SVM)
 * Perceptron (cost function)
+* Random Forest
+* Naive Bayes
 
 #### 3.3 Hyperparameter Tuning
 Grid search with 5-fold cross-validation was used to tune parameters. Each model’s performance was evaluated on a held-out validation set.
